@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthModalService } from '../../../auth/auth.modal.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,5 +12,11 @@ export class NavbarComponent {
 
   setActiveButton(button: string) {
     this.activeButton = button;
+  }
+
+  constructor(private modalService: AuthModalService) {}
+
+  openModal() {
+    this.modalService.openModal();
   }
 }

@@ -1,1 +1,9 @@
-<p>auth works!</p>
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <button (click)="onClose()">X</button>
+    <span class="close-button" (click)="onClose()">&times;</span>
+    <h2>Авторизация в НашГарант</h2>
+    <button>Авторизация через Телеграм</button>
+    <p>Важно! Приложение Telegram должно быть установлено на вашем устройстве, иначе вы не сможете авторизоваться.</p>
+  </div>
+</div>

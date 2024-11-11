@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OrderComponent } from './order.component';
+import { WithdrawalComponent } from './withdrawal.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path:'',
-    component: OrderComponent
+    component: WithdrawalComponent
   }
 ];
 
 @NgModule({
   declarations: [
-    OrderComponent
+    WithdrawalComponent
   ],
   imports: [
     CommonModule,
@@ -20,4 +20,4 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class OrderModule { }
+export class WithdrawalModule { }

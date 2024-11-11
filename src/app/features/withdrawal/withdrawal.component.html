@@ -1,0 +1,71 @@
+<div class="form-container">
+  <h2>Заявка на продажу Luxon</h2>
+
+  <form>
+        <div class="form-switch">
+            <button class="switch-button active">С аккаунта Luxon</button>
+            <button class="switch-button">С баланса НашГарант</button>
+        </div>
+      <label>Выберите рум / кошелек и валюту:</label>
+      <div class="select-group">
+        <select>
+          <option value="Luxon">Luxon</option>
+          <!-- Add more options if needed -->
+        </select>
+        <select>
+          <option value="RUB">RUB</option>
+          <!-- Add more options if needed -->
+        </select>
+      </div>
+
+      <div class="info-box">
+        <span>Комиссия сервиса за продажу: 3% + 2$</span>
+      </div>
+
+      <label>Сколько USD хотите продать:</label>
+      <input type="text" placeholder="От 5 USD до 5000 USD" />
+      <a href="#" class="max-link">Максимум</a>
+
+      <label>Минимальная доля в USD для покупки:</label>
+      <input type="text" placeholder="От 5 USD" />
+
+      <label>Курс RUB для продажи:</label>
+      <input type="text" value="101.01" />
+
+      <div class="transfer-section">
+        <label>Реквизиты для перевода:</label>
+        <div class="select-group">
+          <select>
+            <option value="Sberbank">Сбербанк</option>
+            <!-- Add more options if needed -->
+          </select>
+          <input type="text" placeholder="0000 0000 0000 0000" />
+        </div>
+
+        <label>ФИО получателя:</label>
+        <input
+          type="text"
+          placeholder="Иванов Иван Иванович"
+          class="required"
+        />
+
+        <label>Дополнительная информация для покупателей:</label>
+        <input type="text" placeholder="Укажите любую важную информацию" />
+      </div>
+
+      <div class="result-box">
+        <p>Вы получите: <span>0 RUB</span></p>
+      </div>
+
+      <button type="submit" class="submit-button">
+        Подать заявку на продажу
+      </button>
+
+      <p class="terms">
+        Подавая заявку, вы принимаете условия
+        <a href="#">лицензионного договора</a>, а также соглашаетесь с
+        <a href="#">политикой конфиденциальности</a> и
+        <a href="#">политикой AML / KYC</a>.
+      </p>
+  </form>
+</div>

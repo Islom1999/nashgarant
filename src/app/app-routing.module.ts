@@ -10,9 +10,25 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./features').then((m) => m.HomeModule)
-      }
+      },
+      {
+        path: 'withdrawal',
+        loadChildren: () => import('./features').then((m) => m.WithdrawalModule)
+      },
+      {
+        path: 'deposit',
+        loadChildren: () => import('./features').then((m) => m.DepositModule)
+      },
+      {
+        path: 'order',
+        loadChildren: () => import('./features').then((m) => m.OrderModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('./features').then((m) => m.ProfileModule)
+      },
     ]
-  }
+  },
 ];
 
 @NgModule({

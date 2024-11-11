@@ -5,10 +5,10 @@
 				<img src="images/logo.svg" alt="Logo" class="logo" />
 			</a>
 			<div class="header-center">
-				<a routerLink="/" class="sell-button">
+				<button [routerLink]="['/withdrawal']" class="sell-button">
 					<img src="images/top-right.svg" alt="top-right.png">
 					Сделать заявку на продажу
-				</a>
+				</button>
 				<div class="header-center__toggle">
 					<button class="toggle__btn" [class.active]="activeButton === 'all'" (click)="setActiveButton('all')">Все
 						заявки</button>
@@ -32,13 +32,13 @@
 					</div>
 				</div>
 				<div class="profile">
-					<a href="/" class="profile__btn">
+					<button (click)="openModal()" class="profile__btn">
 						Профиль
 						<img src="images/profile.svg" alt="user" width="16" height="16">
-					</a>
-					<a href="/" class="logout__btn">
+					</button>
+					<button class="logout__btn">
 						<img src="images/logout.svg" alt="logout" width="16" height="16">
-					</a>
+					</button>
 				</div>
 			</div>
 		</div>
