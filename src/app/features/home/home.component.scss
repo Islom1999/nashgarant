@@ -1,0 +1,149 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.logo-box{
+    cursor: pointer;
+    opacity: 0.3;
+    padding: 10px;
+}
+.logo-box.active{
+    opacity: 1;
+}
+
+.logo {
+  width: auto;
+  min-width: 100px;
+  height: 30px;
+  max-height: 40px;
+}
+
+/* Transaction Section */
+.transaction-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.express-deposit-button,
+.go-to-bot-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.express-deposit-button {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.go-to-bot-button {
+  background-color: #34a853;
+  color: #fff;
+}
+
+/* Balance Information */
+.balance-info {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.amount,
+.time {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Currency Selector */
+.currency-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.currency-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f0f8ff;
+}
+
+.currency-button.active {
+  background-color: #d9ecff;
+  color: black;
+}
+
+/* Transaction Table */
+.transaction-table {
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.table-header,
+.table-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-row {
+  background-color: #f9f9f9;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+}
+
+.buy-button {
+  background-color: #4285f4;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.page {
+  padding: 8px 12px;
+  background-color: #f0f8ff;
+  border-radius: 50%;
+  cursor: pointer;
+}

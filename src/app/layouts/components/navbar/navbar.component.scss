@@ -1,0 +1,72 @@
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 20px;
+}
+
+.sell-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navbar-center {
+  display: flex;
+}
+
+.nav-link {
+  background-color: #f0f8ff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav-link.active {
+  background-color: #d9ecff;
+  color: black;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.balance {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}

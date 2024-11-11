@@ -1,0 +1,86 @@
+<div class="home-container">
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <ng-container *ngFor="let item of logoSection">
+        <div
+            class="logo-box"
+            [class.active]="activeLogo.id === item.id"
+            (click)="setActiveLogo(item)"
+        >
+            <img [src]="item.image" [alt]="item.name" class="logo" />
+        </div>
+    </ng-container>
+    
+  </div>
+
+
+  <!-- Deposit and Withdraw Section -->
+   <ng-container *ngIf="activeLogo.has_bot">
+       <div class="transaction-section">
+         <button class="express-deposit-button">Экспресс-{{toogleactiveButton}} в боте</button>
+         <button
+            (click)="changeToogleActiveButton(toogleactiveButton == 'вывод' ? 'депозит' : 'вывод')"
+         >{{toogleactiveButton == 'вывод' ? 'депозит' : 'вывод'}}</button>
+       </div>
+     
+       <!-- Balance Information -->
+       <div class="balance-info">
+         <div class="amount">{{activeLogo.bot?.min}} $</div>
+         <div class="amount">{{activeLogo.bot?.max}} $</div>
+         <div class="amount">{{toogleactiveButton == 'вывод' ? activeLogo.bot?.withdraw : activeLogo.bot?.deposit}} ₽</div>
+         <div class="time">{{activeLogo.bot?.time}}</div>
+         <a target="_blank" [href]="activeLogo.bot?.link" class="go-to-bot-button">Перейти в бот-обменник</a>
+       </div>
+   </ng-container>
+   
+
+  <!-- Currency Selector -->
+  <div class="currency-selector">
+    <ng-container *ngFor="let item of activeLogo.currency">
+        <button class="currency-button"
+            [class.active]="activeCurrency === item"
+            (click)="setActiveCurrency(item)"
+        >{{item}}</button>
+    </ng-container>
+  </div>
+
+  <!-- Transaction Table -->
+  <div class="transaction-table">
+    <div class="table-header">
+      <div class="column"></div>
+      <div class="column">Min</div>
+      <div class="column">Max</div>
+      <div class="column">Kurs</div>
+      <div class="column">Bank</div>
+      <div class="column"></div>
+    </div>
+    <div class="table-row">
+      <div class="column">
+        <span><img src="https://nashgarant.me/assets/images/avatars/3.svg" alt=""></span>
+        <span>
+            <span>icon</span>
+            <span>ID324</span>
+        </span>
+        <span>
+            <span>icon</span>
+            <span>54</span>
+        </span>
+      </div>
+      <div class="column">333</div>
+      <div class="column">333</div>
+      <div class="column">333</div>
+      <div class="column">
+        <span><img src="https://nashgarant.me/assets/images/banks/sber.svg" alt=""></span>
+        <span>Visa</span>
+      </div>
+      <div class="column">
+        <button class="buy-button">Купить {{activeLogo.name}} +</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <span class="page">1</span>
+  </div>
+</div>

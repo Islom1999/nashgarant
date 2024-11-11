@@ -1,0 +1,36 @@
+<nav>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-left">
+              <img
+                src="https://nashgarant.me/assets/images/header/logo.svg"
+                alt="Logo"
+                class="logo"
+              />
+              <button class="sell-button">Сделать заявку на продажу</button>
+            </div>
+            <div class="navbar-center">
+              <button
+                class="nav-link"
+                [class.active]="activeButton === 'all'"
+                (click)="setActiveButton('all')"
+              >Все заявки</button>
+              <button 
+                class="nav-link"
+                [class.active]="activeButton === 'my'"
+                (click)="setActiveButton('my')"
+              >Мои заявки</button>
+            </div>
+            <div class="navbar-right">
+              <span class="balance"> Баланс <strong>0$</strong> </span>
+              <div class="icons">
+                <span>
+                    <!-- Профиль -->
+                    <span class="icon user-icon">👤</span>
+                </span>
+                <span class="icon logout-icon">⏹️</span>
+              </div>
+            </div>
+        </div>
+    </div>
+</nav>
