@@ -142,6 +142,11 @@ a.logo {
 	align-items: center;
 	column-gap: 15px;
 
+	button {
+		border: none;
+		background-color: transparent;
+	}
+
 	.profile__btn {
 		font-weight: 700;
 		font-size: 12px;
