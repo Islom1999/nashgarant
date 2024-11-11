@@ -24,7 +24,6 @@ export interface ILogo{
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-
   activeLogo!:ILogo
   activeCurrency!:string
   toogleactiveButton:'вывод'|'депозит' = 'вывод'

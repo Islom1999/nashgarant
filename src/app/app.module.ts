@@ -7,7 +7,6 @@ import { LayoutsComponent } from './layouts/layouts.component';
 import { AuthComponent } from './auth/auth.component';
 import { NavbarComponent } from './layouts/components/navbar/navbar.component';
 import { FooterComponent } from './layouts/components/footer/footer.component';
-import { OrderComponent } from './features/order/order.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { OrderComponent } from './features/order/order.component';
     AuthComponent,
     NavbarComponent,
     FooterComponent,
-    OrderComponent
   ],
   imports: [
     BrowserModule,

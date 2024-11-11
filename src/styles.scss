@@ -1,6 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../public/fonts/inter/stylesheet.css';
 
-.container{
-    width: 80%;
-    margin: 0 auto;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: 'Inter';
+	text-decoration: none;
+	transition: ease-out all .3s;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.container.big {
+	max-width: 1120px;
+	padding: 0 20px;
+}
+
+a,
+button,
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"] {
+	cursor: pointer;
+}
+body {
+	background-color: #eaeefe;
 }
