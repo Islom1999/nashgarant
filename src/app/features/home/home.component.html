@@ -24,15 +24,17 @@
 				==
 				'вывод' ? 'депозит' : 'вывод'}}</button>
 		</div>
-
 		<!-- Balance Information -->
 		<div class="balance-info">
-			<div class="amount">{{activeLogo.bot?.min}} $</div>
-			<div class="amount">{{activeLogo.bot?.max}} $</div>
-			<div class="amount">{{toogleactiveButton == 'вывод' ? activeLogo.bot?.withdraw : activeLogo.bot?.deposit}} ₽
-			</div>
-			<div class="time">{{activeLogo.bot?.time}}</div>
-			<a target="_blank" [href]="activeLogo.bot?.link" class="go-to-bot-button">Перейти в бот-обменник</a>
+			<b class="amount">{{activeLogo.bot?.min}} $</b>
+			<b class="amount">{{activeLogo.bot?.max}} $</b>
+			<b class="amount">{{toogleactiveButton == 'вывод' ? activeLogo.bot?.withdraw : activeLogo.bot?.deposit}} ₽
+			</b>
+			<b class="time">{{activeLogo.bot?.time}}</b>
+			<a target="_blank" [href]="activeLogo.bot?.link" class="go-to-bot-button _gradient">
+				<img src="images/top-right.svg" alt="top right icon" width="18">
+				Перейти в бот-обменник
+			</a>
 		</div>
 	</ng-container>
 

@@ -22,6 +22,15 @@
 	padding: 0 20px;
 }
 
+._gradient {
+	background: linear-gradient(245.83deg, #21A038 -7.4%, #307BF6 76.4%);
+	color: white;
+
+	&:hover {
+		box-shadow: 0 0 10px -2px #307bf6;
+	}
+}
+
 a,
 button,
 input[type="button"],
@@ -29,6 +38,7 @@ input[type="checkbox"],
 input[type="radio"] {
 	cursor: pointer;
 }
+
 body {
 	background-color: #eaeefe;
 }

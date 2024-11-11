@@ -90,3 +90,36 @@
 		}
 	}
 }
+
+.balance-info {
+	width: 100%;
+	background-color: white;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr 280px;
+	padding: 5px;
+	padding-left: 10px;
+	border-radius: 10px;
+
+	.go-to-bot-button {
+		margin-left: auto;
+		width: 100%;
+		max-width: 240px;
+		padding: 13px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 10px;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 14px;
+		border-radius: 10px;
+	}
+
+	.amount,
+	.time {
+		font-weight: 700;
+		font-size: 12px;
+		color: #0a0a0a;
+	}
+}
