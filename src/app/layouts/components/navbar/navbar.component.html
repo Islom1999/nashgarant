@@ -9,10 +9,12 @@
 					<img src="images/top-right.svg" alt="top-right.png">
 					Сделать заявку на продажу
 				</button>
-				<div class="header-center__toggle">
-					<button class="toggle__btn" [class.active]="activeButton === 'all'" (click)="setActiveButton('all')">Все
+				<div class="_switch-btns header-center__toggle">
+					<button class="switch-button toggle__btn" [class.active]="activeButton === 'all'"
+						(click)="setActiveButton('all')">Все
 						заявки</button>
-					<button class="toggle__btn" [class.active]="activeButton === 'my'" (click)="setActiveButton('my')">Мои
+					<button class="switch-button toggle__btn" [class.active]="activeButton === 'my'"
+						(click)="setActiveButton('my')">Мои
 						заявки</button>
 				</div>
 			</div>
@@ -22,7 +24,7 @@
 						<h6>Баланс</h6>
 						<strong>0$</strong>
 					</div>
-					<div class="balance__info">
+					<div class="def-tooltip balance__info">
 						<img src="images/info.svg" alt="info" width="18">
 						<div class="tooltip">
 							<p> Это внутренний баланс в НашГарант. Вы можете пополнять его и выводить без комиссии со своего

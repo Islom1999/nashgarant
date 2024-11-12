@@ -1,71 +1,77 @@
-<div class="form-container">
-  <h2>Заявка на продажу Luxon</h2>
+<div class="container big">
+	<div class="deposit-head">
+		<h2>Заявка на покупку ПокерОК</h2>
+		<a (click)="goBack()" class="back-link">
+			<img src="images/left-arrow.svg" alt="back link" width="14">
+			Вернуться назад
+		</a>
+	</div>
+	<form class="_def-form">
+		<div class="form-left">
+			<div class="form-switch _switch-btns">
+				<button type="button" class="switch-button active" (click)="ActiveButton('account')"
+					[class.active]="activeButton === 'account'">С аккаунта Luxon</button>
+				<button class="switch-button" type="button" (click)="ActiveButton('balance')" [class.active]="activeButton === 'balance'">С
+					баланса НашГарант</button>
+			</div>
+			<label>Выберите рум / кошелек и валюту:</label>
+			<div class="select-group">
+				<select>
+					<option value="Luxon">Luxon</option>
+					<!-- Add more options if needed -->
+				</select>
+				<select>
+					<option value="RUB">RUB</option>
+					<!-- Add more options if needed -->
+				</select>
+			</div>
 
-  <form>
-        <div class="form-switch">
-            <button class="switch-button active">С аккаунта Luxon</button>
-            <button class="switch-button">С баланса НашГарант</button>
-        </div>
-      <label>Выберите рум / кошелек и валюту:</label>
-      <div class="select-group">
-        <select>
-          <option value="Luxon">Luxon</option>
-          <!-- Add more options if needed -->
-        </select>
-        <select>
-          <option value="RUB">RUB</option>
-          <!-- Add more options if needed -->
-        </select>
-      </div>
+			<div class="info-box">
+				<span>Комиссия сервиса за продажу: 3% + 2$</span>
+			</div>
 
-      <div class="info-box">
-        <span>Комиссия сервиса за продажу: 3% + 2$</span>
-      </div>
+			<label>Сколько USD хотите продать:</label>
+			<input type="text" placeholder="От 5 USD до 5000 USD" />
+			<a href="#" class="max-link">Максимум</a>
 
-      <label>Сколько USD хотите продать:</label>
-      <input type="text" placeholder="От 5 USD до 5000 USD" />
-      <a href="#" class="max-link">Максимум</a>
+			<label>Минимальная доля в USD для покупки:</label>
+			<input type="text" placeholder="От 5 USD" />
 
-      <label>Минимальная доля в USD для покупки:</label>
-      <input type="text" placeholder="От 5 USD" />
+			<label>Курс RUB для продажи:</label>
+			<input type="text" value="101.01" />
+		</div>
+		<div class="_card-form form-right">
+			<div class="transfer-section">
+				<label>Реквизиты для перевода:</label>
+				<div class="select-group">
+					<select>
+						<option value="Sberbank">Сбербанк</option>
+						<!-- Add more options if needed -->
+					</select>
+					<input type="text" placeholder="0000 0000 0000 0000" />
+				</div>
 
-      <label>Курс RUB для продажи:</label>
-      <input type="text" value="101.01" />
+				<label>ФИО получателя:</label>
+				<input type="text" placeholder="Иванов Иван Иванович" class="required" />
 
-      <div class="transfer-section">
-        <label>Реквизиты для перевода:</label>
-        <div class="select-group">
-          <select>
-            <option value="Sberbank">Сбербанк</option>
-            <!-- Add more options if needed -->
-          </select>
-          <input type="text" placeholder="0000 0000 0000 0000" />
-        </div>
+				<label>Дополнительная информация для покупателей:</label>
+				<input type="text" placeholder="Укажите любую важную информацию" />
+			</div>
 
-        <label>ФИО получателя:</label>
-        <input
-          type="text"
-          placeholder="Иванов Иван Иванович"
-          class="required"
-        />
+			<div class="result-box">
+				<p>Вы получите: <span>0 RUB</span></p>
+			</div>
 
-        <label>Дополнительная информация для покупателей:</label>
-        <input type="text" placeholder="Укажите любую важную информацию" />
-      </div>
+			<button type="submit" class="submit-button">
+				Подать заявку на продажу
+			</button>
 
-      <div class="result-box">
-        <p>Вы получите: <span>0 RUB</span></p>
-      </div>
-
-      <button type="submit" class="submit-button">
-        Подать заявку на продажу
-      </button>
-
-      <p class="terms">
-        Подавая заявку, вы принимаете условия
-        <a href="#">лицензионного договора</a>, а также соглашаетесь с
-        <a href="#">политикой конфиденциальности</a> и
-        <a href="#">политикой AML / KYC</a>.
-      </p>
-  </form>
+			<p class="terms">
+				Подавая заявку, вы принимаете условия
+				<a href="#">лицензионного договора</a>, а также соглашаетесь с
+				<a href="#">политикой конфиденциальности</a> и
+				<a href="#">политикой AML / KYC</a>.
+			</p>
+		</div>
+	</form>
 </div>
