@@ -1,65 +1,112 @@
 form {
-  margin-top: 43px;
+	margin-top: 43px;
 }
 
 .result-box {
-  background: transparent;
-  border: 1px solid #d3dde7;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 13px 14px;
-  column-gap: 5px;
-  img {
-    display: block;
-  }
+	background: transparent;
+	border: 1px solid #d3dde7;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 13px 14px;
+	column-gap: 5px;
 
-  p {
-    color: #fff;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-  }
+	img {
+		display: block;
+	}
+
+	p {
+		color: #fff;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+	}
+}
+
+
+.kach-selector {
+	display: grid;
+	column-gap: 10px;
+	grid-template-columns: 1fr 100px;
 }
 
 .custom-select {
-  position: relative;
-  width: 200px;
-  border: 1px solid #ccc;
-  padding: 8px;
-  cursor: pointer;
-  user-select: none;
-}
+	user-select: none;
+	border: 1px solid #d3dde7;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 10px;
+	height: 45px;
+	font-size: 16px;
+	font-weight: 400;
+	width: 100%;
+	position: relative;
 
-.selected-option {
-  padding: 8px;
+	&.show {
+
+		.selected-option {
+			img {
+				transform: rotate(-180deg);
+			}
+		}
+	}
 }
 
 .options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 1;
+	position: absolute;
+	top: calc(100% + 2px);
+	left: 0;
+	background-color: #fff;
+	box-shadow: 0 5px 20px #0000001a;
+	border-radius: 15px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: auto;
+	box-sizing: border-box;
+	max-height: 240px;
+	overflow-y: auto;
+	z-index: 1;
+	width: 100%;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	li {
+		background-color: #fff;
+		border: none;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		color: #a9b0c8;
+		padding: 15px;
+
+		&:hover {
+			font-weight: 700;
+			color: #307bf6;
+		}
+
+		&.active {
+			background-color: #ecf6ff;
+			font-weight: 700;
+			color: #307bf6;
+		}
+	}
 }
 
-.options li {
-  padding: 8px;
-  cursor: pointer;
-}
+.selected-option {
+	cursor: pointer;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-.options li:hover {
-  background-color: #eee;
-}
-
-.input-block.flex{
-    display: flex;
+	img {
+		display: block;
+		transition: ease all .2s;
+	}
 }

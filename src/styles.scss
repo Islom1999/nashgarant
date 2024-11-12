@@ -11,7 +11,7 @@
 	transition: ease-out all .3s;
 }
 
-body {
+.content {
 	background-color: #eaeefe;
 }
 
@@ -113,7 +113,7 @@ input[type="radio"] {
 	}
 
 	.alert {
-		display: block;
+		display: none;
 		width: 100%;
 		padding: 14px;
 		background-color: #e67575;
@@ -123,6 +123,10 @@ input[type="radio"] {
 		border-radius: 15px;
 		margin-top: 8px;
 		text-align: center;
+
+		&.isInvalid {
+			display: block;
+		}
 	}
 }
 

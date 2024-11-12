@@ -1,6 +1,6 @@
 <div class="container big">
 	<div class="deposit-head">
-		<h2>Заявка на покупку ПокерОК</h2>
+		<h2>Заявка на покупку {{ activeLogo?.name || 'null' }}</h2>
 		<a (click)="goBack()" class="back-link">
 			<img src="images/left-arrow.svg" alt="back link" width="14">
 			Вернуться назад
@@ -10,30 +10,34 @@
 		<div class="form-left">
 			<div class="form-switch _switch-btns">
 				<button type="button" class="switch-button active" (click)="ActiveButton('account')"
-					[class.active]="activeButton === 'account'">С аккаунта ПокерОК</button>
+					[class.active]="activeButton === 'account'">С аккаунта {{ activeLogo?.name || 'Tanlang' }}</button>
 				<button class="switch-button" type="button" (click)="ActiveButton('balance')"
 					[class.active]="activeButton === 'balance'">С баланса НашГарант</button>
 			</div>
 			<div class="form-series">
 				<label>Выберите рум / кошелек и валюту:</label>
-                <div class="input-block flex">
-                    <div (click)="toggleDropdown1()" class="custom-select">
-                        <div class="selected-option">{{ activeLogo?.name || 'Tanlang' }}</div>
-                        <ul *ngIf="dropdownOpen1" class="options">
-                          <li *ngFor="let option of logoSection" (click)="selectOption1(option.name)">
-                            {{ option.name }}
-                          </li>
-                        </ul>
-                    </div>
-                    <div (click)="toggleDropdown2()" class="custom-select">
-                        <div class="selected-option">{{ activeCurrency|| 'Tanlang' }}</div>
-                        <ul *ngIf="dropdownOpen2" class="options">
-                          <li *ngFor="let option of (activeLogo?.currency || [])" (click)="selectOption2(option)">
-                            {{ option }}
-                          </li>
-                        </ul>
-                    </div>
-                </div>
+				<div class="kach-selector">
+					<div (click)="toggleDropdown1()" class="custom-select" [ngClass]="{'show': dropdownOpen1}">
+						<div class="selected-option">{{ activeLogo?.name || 'Tanlang' }} <img src="images/select-arrow2.svg"
+								alt="select icon" class="select-arrow"></div>
+						<ul *ngIf="dropdownOpen1" class="options">
+							<li *ngFor="let option of logoSection" (click)="selectOption1(option.name)"
+								[ngClass]="{'active': activeLogo?.name === option.name}">
+								{{ option.name }}
+							</li>
+						</ul>
+					</div>
+					<div (click)="toggleDropdown2()" class="custom-select" [ngClass]="{'show': dropdownOpen2}">
+						<div class="selected-option">{{ activeCurrency|| 'null' }} <img src="images/select-arrow2.svg"
+								alt="select icon" class="select-arrow"></div>
+						<ul *ngIf="dropdownOpen2" class="options">
+							<li *ngFor="let option of (activeLogo?.currency || [])" (click)="selectOption2(option)"
+								[ngClass]="{'active': activeCurrency === option}">
+								{{ option }}
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 
 			<div class="info-box">
@@ -72,7 +76,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="alert">
+				<div class="alert isInvalid">
 					Обязательное поле
 				</div>
 			</div>
