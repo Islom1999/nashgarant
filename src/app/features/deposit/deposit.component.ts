@@ -24,4 +24,9 @@ export class DepositComponent {
 			input.focus();
 		}
 	}
+
+	infoOrder: boolean = false;
+	infoToogle(): void {
+		this.infoOrder = !this.infoOrder;
+	}
 }

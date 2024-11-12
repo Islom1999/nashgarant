@@ -8,10 +8,20 @@
 	</div>
 	<form class="_def-form">
 		<div class="form-left">
-			<label class="info-order">
-				Информация о заявке
-				<img src="images/down-blue.svg" alt="select-arrow" width="8">
-			</label>
+			<div>
+				<label class="info-order" (click)="infoToogle()" [ngClass]="{'show': infoOrder}">
+					Информация о заявке
+					<img src="images/down-blue.svg" alt="select-arrow" width="8">
+				</label>
+				@if (infoOrder) {
+				<div class="info-order__descr">
+					<p>№ заявки: <b>R541267 12.11.24, 12:49</b></p>
+					<p>Продавец: <b>ID3821</b></p>
+					<p>Курс и валюта:<b>104 RUB</b></p>
+					<p>Банк:<b>Т-Банк</b></p>
+				</div>
+				}
+			</div>
 			<div class="form-series">
 				<label>Сумма покупки в RUB:</label>
 				<div class="input-block">
