@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { bankData, sbpBankData } from './bank.mock';
 
 @Component({
 	selector: 'app-withdrawal',
@@ -9,6 +10,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class WithdrawalComponent implements OnInit {
 	activeLogo!: any
 	activeCurrency!: string
+
+  bankData = bankData
+
+  sbpBankData = sbpBankData
+
+  activeBank: any
+  activeSbpBank: any
 
 	logoSection = [
 		{ id: '1', image: 'https://nashgarant.me/assets/images/exchanges/POK.svg', name: 'ПокерОК', has_bot: true, currency: ['RUB', 'BYN', 'KZT',], bot: { deposit: 1222, withdraw: 1221, min: 1212, max: 1212112, time: "5-10 min", link: 'https://t.me/luxonobmenbot' } },
@@ -23,6 +31,8 @@ export class WithdrawalComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.selectOption1(this.logoSection[0].name)
+		this.selectOption3(this.bankData[0].name)
+		this.selectOption4(this.sbpBankData[0].name)
 	}
 
 	goBack(): void {
@@ -54,6 +64,31 @@ export class WithdrawalComponent implements OnInit {
 
 	selectOption2(option: string) {
 		this.activeCurrency = option;
+	}
+
+  dropdownOpen3 = false;
+
+	toggleDropdown3() {
+		this.dropdownOpen3 = !this.dropdownOpen3;
+		this.dropdownOpen1 = false;
+		this.dropdownOpen2 = false;
+	}
+
+	selectOption3(option: string) {
+    this.activeBank = this.bankData.find(o => o.name === option);
+	}
+
+  dropdownOpen4 = false;
+
+	toggleDropdown4() {
+		this.dropdownOpen4 = !this.dropdownOpen4;
+		this.dropdownOpen1 = false;
+		this.dropdownOpen2 = false;
+		this.dropdownOpen3 = false;
+	}
+
+	selectOption4(option: string) {
+    this.activeSbpBank = this.sbpBankData.find(o => o.name === option);
 	}
 
 	@HostListener('document:click', ['$event'])

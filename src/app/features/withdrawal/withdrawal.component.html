@@ -82,6 +82,45 @@
 			</div>
 		</div>
 		<div class="_card-form form-right">
+            <div class="form-series form-series__right">
+				<label>Банк для отправки перевода под ЕРИП:*</label>
+				<div class="input-block _input-block__desabled">
+					<div (click)="toggleDropdown3()" class="custom-select" [ngClass]="{'show': dropdownOpen3}">
+						<div class="selected-option">{{ activeBank.name|| 'null' }} <img src="images/select-arrow2.svg"
+								alt="select icon" class="select-arrow"></div>
+						<ul *ngIf="dropdownOpen3" class="options">
+							<li *ngFor="let option of bankData" (click)="selectOption3(option.name)"
+								[ngClass]="{'active': activeBank.name === option.name}">
+								{{ option.name }}
+							</li>
+						</ul>
+					</div>
+                    <input type="text" placeholder="Иванов Иван Иванович" required>
+				</div>
+				<div class="alert">
+					Обязательное поле
+				</div>
+			</div>
+
+            <div *ngIf="activeBank.slug == 'sbp'" class="form-series form-series__right">
+				<label>Банк для отправки перевода под ЕРИП:*</label>
+				<div class="input-block _input-block__desabled">
+					<div (click)="toggleDropdown4()" class="custom-select" [ngClass]="{'show': dropdownOpen4}">
+						<div class="selected-option">{{ activeSbpBank.name|| 'null' }} <img src="images/select-arrow2.svg"
+								alt="select icon" class="select-arrow"></div>
+						<ul *ngIf="dropdownOpen4" class="options">
+							<li *ngFor="let option of sbpBankData" (click)="selectOption4(option.name)"
+								[ngClass]="{'active': activeSbpBank.name === option.name}">
+								{{ option.name }}
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="alert">
+					Обязательное поле
+				</div>
+			</div>
+            
 			<div class="form-series form-series__right">
 				<label>Банк для отправки перевода под ЕРИП:*</label>
 				<div class="input-block _input-block__desabled">
