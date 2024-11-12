@@ -1,16 +1,16 @@
 <div class="content">
 	<div class="container big">
-		<!-- Logo Section -->
+		<!-- Room Section -->
 		<div class="logo-container">
-			<ng-container *ngFor="let item of logoSection">
-				<div class="logo-box" [class.active]="activeLogo.id === item.id" (click)="setActiveLogo(item)">
-					<img [src]="item.image" [alt]="item.name" class="logo" />
+			<ng-container *ngFor="let item of roomData">
+				<div class="logo-box" [class.active]="activeRoom.id === item.id" (click)="setActiveRoom(item)">
+					<img [src]="(item.image)" [alt]="item.name" class="logo" />
 				</div>
 			</ng-container>
 		</div>
 
 		<!-- Deposit and Withdraw Section -->
-		<ng-container *ngIf="activeLogo.has_bot">
+		<ng-container *ngIf="activeRoom.is_active_express">
 			<div class="transaction-section">
 				<button class="express-deposit-btn">
 					Экспресс-{{toogleactiveButton}} в боте
@@ -27,12 +27,12 @@
 			</div>
 			<!-- Balance Information -->
 			<div class="balance-info">
-				<b class="amount">{{activeLogo.bot?.min}} $</b>
-				<b class="amount">{{activeLogo.bot?.max}} $</b>
-				<b class="amount">{{toogleactiveButton == 'вывод' ? activeLogo.bot?.withdraw : activeLogo.bot?.deposit}} ₽
+				<b class="amount">{{activeRoom.min}} $</b>
+				<b class="amount">{{activeRoom.max}} $</b>
+				<b class="amount">{{toogleactiveButton == 'вывод' ? activeRoom?.express_max_deposit : activeRoom?.express_max_deposit}} ₽
 				</b>
-				<b class="time">{{activeLogo.bot?.time}}</b>
-				<a target="_blank" [href]="activeLogo.bot?.link" class="go-to-bot-button _gradient">
+				<b class="time">{{activeRoom.bot?.time || '5-10 min'}}</b>
+				<a target="_blank" [href]="activeRoom.bot?.link" class="go-to-bot-button _gradient">
 					<img src="images/top-right.svg" alt="top right icon" width="18">
 					Перейти в бот-обменник
 				</a>
@@ -41,9 +41,9 @@
 
 		<!-- Currency Selector -->
 		<div class="currency-selector">
-			<ng-container *ngFor="let item of activeLogo.currency">
-				<button class="currency-button" [class.active]="activeCurrency === item"
-					(click)="setActiveCurrency(item)">{{item}}</button>
+			<ng-container *ngFor="let item of activeRoom.currencies">
+				<button class="currency-button" [class.active]="activeCurrency === item.title"
+					(click)="setActiveCurrency(item.title)">{{item.title}}</button>
 			</ng-container>
 		</div>
 		<!-- Transaction Table -->
@@ -100,7 +100,7 @@
 					<div class="row-value">
 						<button [routerLink]="['/deposit']" class="row__btn">
 							<img src="images/plus.svg" alt="plus" width="19">
-							Купить {{activeLogo.name}}
+							Купить {{activeRoom.name}}
 						</button>
 					</div>
 				</div>

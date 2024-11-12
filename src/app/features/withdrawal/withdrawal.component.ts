@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { bankData, sbpBankData } from './bank.mock';
+import { bankData, sbpBankData } from '../../shared';
 
 @Component({
 	selector: 'app-withdrawal',

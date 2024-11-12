@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { roomData } from '../../shared';
 
 export interface IBot {
 	deposit: number
@@ -9,7 +10,7 @@ export interface IBot {
 	link: string
 }
 
-export interface ILogo {
+export interface IRoom {
 	id: string
 	image: string
 	name: string
@@ -24,18 +25,11 @@ export interface ILogo {
 	styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-	activeLogo!: ILogo
+	activeRoom!: any
 	activeCurrency!: string
 	toogleactiveButton: 'вывод' | 'депозит' = 'вывод'
 
-	logoSection: ILogo[] = [
-		{ id: '1', image: 'https://nashgarant.me/assets/images/exchanges/POK.svg', name: 'POK', has_bot: true, currency: ['RUB', 'BYN', 'KZT',], bot: { deposit: 1222, withdraw: 1221, min: 1212, max: 1212112, time: "5-10 min", link: 'https://t.me/luxonobmenbot' } },
-		{ id: '2', image: 'https://nashgarant.me/assets/images/exchanges/LUX.svg', name: 'LUX', has_bot: true, currency: ['RUB', 'BYN', 'KZT', 'UAH'], bot: { deposit: 1222, withdraw: 1221, min: 1212, max: 1212112, time: "5-10 min", link: 'https://t.me/luxonobmenbot' } },
-		{ id: '3', image: 'https://nashgarant.me/assets/images/exchanges/GG.svg', name: 'GG', has_bot: false, currency: ['UAH', 'RUB', 'BYN', 'KZT',] },
-		{ id: '4', image: 'https://nashgarant.me/assets/images/exchanges/ACR.svg', name: 'ACR', has_bot: false, currency: ['RUB', 'BYN', 'KZT', 'UAH'] },
-		{ id: '5', image: 'https://nashgarant.me/assets/images/exchanges/PK.svg', name: 'PK', has_bot: false, currency: ['RUB', 'BYN', 'KZT', 'UAH'] },
-		{ id: '6', image: 'https://nashgarant.me/assets/images/exchanges/RS.svg', name: 'RS', has_bot: false, currency: ['RUB', 'BYN', 'KZT', 'UAH'] },
-	]
+	roomData = roomData
 
 	transactioon = [
 		{ id: 'ID384939', offer: 10, logo: "images/user.svg", min: 2000, max: 2500, kurs: 2250, bank: "Сбербанк", bank_logo: 'images/bank.svg' },
@@ -46,9 +40,9 @@ export class HomeComponent implements OnInit {
 		{ id: 'ID384944', offer: 22, logo: "images/user.svg", min: 2500, max: 3000, kurs: 2500, bank: "Россельхозбанк", bank_logo: 'images/bank.svg' },
 	]
 
-	setActiveLogo(item: ILogo) {
-		this.activeLogo = item;
-		this.activeCurrency = item.currency[0];
+	setActiveRoom(item: any) {
+		this.activeRoom = item;
+		this.activeCurrency = item.currencies[0].title;
 	}
 
 	setActiveCurrency(item: string) {
@@ -60,7 +54,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.setActiveLogo(this.logoSection[0])
+		this.setActiveRoom(this.roomData[0])
 	}
 
 
