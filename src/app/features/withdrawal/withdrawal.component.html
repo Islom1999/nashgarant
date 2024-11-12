@@ -31,9 +31,9 @@
 						<div class="selected-option">{{ activeCurrency|| 'null' }} <img src="images/select-arrow2.svg"
 								alt="select icon" class="select-arrow"></div>
 						<ul *ngIf="dropdownOpen2" class="options">
-							<li *ngFor="let option of (activeLogo?.currency || [])" (click)="selectOption2(option)"
-								[ngClass]="{'active': activeCurrency === option}">
-								{{ option }}
+							<li *ngFor="let option of (activeLogo?.currencies || [])" (click)="selectOption2(option.title)"
+								[ngClass]="{'active': activeCurrency === option.title}">
+								{{ option.title }}
 							</li>
 						</ul>
 					</div>

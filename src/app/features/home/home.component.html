@@ -13,7 +13,7 @@
 		<ng-container *ngIf="activeRoom.is_active_express">
 			<div class="transaction-section">
 				<button class="express-deposit-btn">
-					Экспресс-{{toogleactiveButton}} в боте
+					Экспресс-{{toogleActiveButton}} в боте
 					<ul class="deposit-btn__icons">
 						<li><img src="images/deposid2.svg" alt="deposit icon"></li>
 						<li><img src="images/deposid1.svg" alt="deposit icon"></li>
@@ -21,7 +21,7 @@
 					</ul>
 				</button>
 				<button class="two__btn"
-					(click)="changeToogleActiveButton(toogleactiveButton == 'вывод' ? 'депозит' : 'вывод')">{{toogleactiveButton
+					(click)="changeToogleActiveButton(toogleActiveButton == 'вывод' ? 'депозит' : 'вывод')">{{toogleActiveButton
 					==
 					'вывод' ? 'депозит' : 'вывод'}}</button>
 			</div>
@@ -29,7 +29,7 @@
 			<div class="balance-info">
 				<b class="amount">{{activeRoom.min}} $</b>
 				<b class="amount">{{activeRoom.max}} $</b>
-				<b class="amount">{{toogleactiveButton == 'вывод' ? activeRoom?.express_max_deposit : activeRoom?.express_max_deposit}} ₽
+				<b class="amount">{{toogleActiveButton == 'вывод' ? activeRoom?.express_max_deposit : activeRoom?.express_max_deposit}} ₽
 				</b>
 				<b class="time">{{activeRoom.bot?.time || '5-10 min'}}</b>
 				<a target="_blank" [href]="activeRoom.bot?.link" class="go-to-bot-button _gradient">
@@ -69,9 +69,9 @@
 				</div>
 				<div class="column"></div>
 			</div>
-			<ng-container *ngFor="let item of transactioon">
+			<ng-container *ngFor="let item of withdrawalData">
 				<div class="row-grid table-row">
-					<img [src]="item.logo" width="35" alt="user" class="user-img">
+					<img [src]="item.user.avatar_url" width="35" alt="user" class="user-img">
 					<div class="user">
 						<div class="user-id">
 							<span class="up"></span>
@@ -79,22 +79,22 @@
 						</div>
 						<div class="user-frends">
 							<img src="images/ok.svg" alt="friends" width="21">
-							<span class="value">{{item.offer}}</span>
+							<span class="value">{{item.user.success_request}}</span>
 						</div>
 					</div>
 					<div class="row-value">
-						<span class="value">{{item.min}}</span>
+						<span class="value">{{item.min_deposit}}</span>
 					</div>
 					<div class="row-value">
-						<span class="value">{{item.max}}</span>
+						<span class="value">{{item.max_deposit}}</span>
 					</div>
 					<div class="row-value">
-						<span class="value">{{item.kurs}}</span>
+						<span class="value">{{item.amount_commission}}</span>
 					</div>
 					<div class="row-value">
 						<div class="bank">
-							<img [src]="item.bank_logo" alt="bank" width="19">
-							<span class="value">{{item.bank}}</span>
+							<img [src]="item.bank.image_url" alt="bank" width="19">
+							<span class="value">{{item.bank.name}}</span>
 						</div>
 					</div>
 					<div class="row-value">

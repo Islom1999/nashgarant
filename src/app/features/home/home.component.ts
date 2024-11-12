@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { roomData } from '../../shared';
+import { roomData, withdrawalData } from '../../shared';
 
 export interface IBot {
 	deposit: number
@@ -27,9 +27,10 @@ export interface IRoom {
 export class HomeComponent implements OnInit {
 	activeRoom!: any
 	activeCurrency!: string
-	toogleactiveButton: 'вывод' | 'депозит' = 'вывод'
+	toogleActiveButton: 'вывод' | 'депозит' = 'вывод'
 
 	roomData = roomData
+	withdrawalData = withdrawalData
 
 	transactioon = [
 		{ id: 'ID384939', offer: 10, logo: "images/user.svg", min: 2000, max: 2500, kurs: 2250, bank: "Сбербанк", bank_logo: 'images/bank.svg' },
@@ -50,7 +51,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	changeToogleActiveButton(item: 'вывод' | 'депозит') {
-		this.toogleactiveButton = item;
+		this.toogleActiveButton = item;
 	}
 
 	ngOnInit(): void {

@@ -9,7 +9,7 @@ export const withdrawalData = [
 			"rating": 966,
 			"success_request": 10,
 			"online": true,
-			"avatar_url": "/assets/images/avatars/5.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 100,
 		"max_deposit": 3610.24,
@@ -37,7 +37,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0.5,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sbp.svg",
+			"image_url": "images/sbp.svg",
 			"type_valid": "number",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -119,7 +119,7 @@ export const withdrawalData = [
 			"rating": 9215,
 			"success_request": 87,
 			"online": false,
-			"avatar_url": "/assets/images/avatars/18.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 100,
 		"max_deposit": 233.62,
@@ -147,7 +147,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/tinkoff.svg",
+			"image_url": "images/tinkoff.svg",
 			"type_valid": "bank",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -229,7 +229,7 @@ export const withdrawalData = [
 			"rating": 1741,
 			"success_request": 51,
 			"online": false,
-			"avatar_url": "/assets/images/avatars/11.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 44,
 		"max_deposit": 40.7,
@@ -257,7 +257,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sber.svg",
+			"image_url": "images/sber.svg",
 			"type_valid": "bank",
 			"is_card_account": 0,
 			"is_card_number": 1,
@@ -339,7 +339,7 @@ export const withdrawalData = [
 			"rating": 331,
 			"success_request": 19,
 			"online": false,
-			"avatar_url": "/assets/images/avatars/4.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 50,
 		"max_deposit": 74.34,
@@ -367,7 +367,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/tinkoff.svg",
+			"image_url": "images/tinkoff.svg",
 			"type_valid": "bank",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -449,7 +449,7 @@ export const withdrawalData = [
 			"rating": 7859,
 			"success_request": 183,
 			"online": true,
-			"avatar_url": "/assets/images/avatars/17.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 50,
 		"max_deposit": 138,
@@ -477,7 +477,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sber.svg",
+			"image_url": "images/sber.svg",
 			"type_valid": "bank",
 			"is_card_account": 0,
 			"is_card_number": 1,
@@ -559,7 +559,7 @@ export const withdrawalData = [
 			"rating": 6228,
 			"success_request": 73,
 			"online": true,
-			"avatar_url": "/core/avatar/122542ed24975bd88d490b39e87b2954.jpeg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 30,
 		"max_deposit": 346.81,
@@ -587,7 +587,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0.5,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sbp.svg",
+			"image_url": "images/sbp.svg",
 			"type_valid": "number",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -669,7 +669,7 @@ export const withdrawalData = [
 			"rating": 2028,
 			"success_request": 36,
 			"online": false,
-			"avatar_url": "/assets/images/avatars/2.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 200,
 		"max_deposit": 190,
@@ -697,7 +697,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0.5,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sbp.svg",
+			"image_url": "images/sbp.svg",
 			"type_valid": "number",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -779,7 +779,7 @@ export const withdrawalData = [
 			"rating": 1089,
 			"success_request": 28,
 			"online": true,
-			"avatar_url": "/assets/images/avatars/6.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 5,
 		"max_deposit": 12.38,
@@ -807,7 +807,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0.5,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sbp.svg",
+			"image_url": "images/sbp.svg",
 			"type_valid": "number",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -889,7 +889,7 @@ export const withdrawalData = [
 			"rating": 95799,
 			"success_request": 826,
 			"online": true,
-			"avatar_url": "/assets/images/avatars/20.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 100,
 		"max_deposit": 841.12,
@@ -917,7 +917,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0.5,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sbp.svg",
+			"image_url": "images/sbp.svg",
 			"type_valid": "number",
 			"is_card_account": 0,
 			"is_card_number": 0,
@@ -999,7 +999,7 @@ export const withdrawalData = [
 			"rating": 2134,
 			"success_request": 14,
 			"online": true,
-			"avatar_url": "/assets/images/avatars/5.svg"
+			"avatar_url": "images/user.svg"
 		},
 		"min_deposit": 10,
 		"max_deposit": 158.85,
@@ -1027,7 +1027,7 @@ export const withdrawalData = [
 			"withdrawal_commission_amount": 50,
 			"additional_percent": 0.5,
 			"additional_min_amount": 0,
-			"image_url": "/assets/images/banks/sbp.svg",
+			"image_url": "images/sbp.svg",
 			"type_valid": "number",
 			"is_card_account": 0,
 			"is_card_number": 0,
