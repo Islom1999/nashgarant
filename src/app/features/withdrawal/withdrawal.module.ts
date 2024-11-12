@@ -4,6 +4,7 @@ import { WithdrawalComponent } from './withdrawal.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
 
 const routes: Routes = [
 	{
@@ -18,6 +19,7 @@ const routes: Routes = [
 	],
 	imports: [
 		CommonModule,
+    SharedModule,
 		ReactiveFormsModule,
 		NgxMaskDirective, NgxMaskPipe,
 		RouterModule.forChild(routes)

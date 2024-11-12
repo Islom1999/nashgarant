@@ -27,6 +27,15 @@ export class WithdrawalComponent implements OnInit {
 	]
 	constructor(private location: Location) { }
 
+  options = ['Option 1', 'Option 2', 'Option 3'];
+  selectedOption: string | null = null;
+
+  onSelectionChange(option: string) {
+    this.selectedOption = option;
+    console.log('Tanlangan variant:', option);
+  }
+
+
 	ngOnInit(): void {
 		this.selectOption1(this.logoSection[0].name)
 		this.selectOption3(this.bankData[0].name)
