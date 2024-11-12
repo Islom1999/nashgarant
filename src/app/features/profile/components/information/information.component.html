@@ -1,1 +1,45 @@
-<p>information works!</p>
+<div class="content-flex">
+	<div class="_def-form">
+		<form class="form-left _card-form content__left">
+			<div class="form-series">
+				<label>Ваш ID в poker-trade:</label>
+				<div class="input-block">
+					<input type="number" value="47185" disabled>
+				</div>
+			</div>
+			<div class="form-series">
+				<label>Ваш никнейм в poker-trade:*:</label>
+				<div class="input-block">
+					<input type="text" placeholder="username" #username>
+					<span class="max-link" (click)="saveUsernameFN(username)" *ngIf="!saveUsername">Сохранить</span>
+				</div>
+			</div>
+			<div class="form-series">
+				<label>Ваш email:</label>
+				<div class="input-block">
+					<input type="email" placeholder="user@luxon.com">
+					<span class="max-link" (click)="sendCode()">Отправить код</span>
+				</div>
+			</div>
+			<div class="warn-block">
+				<img src="images/warn.svg" alt="warn icon" width="18">
+				<p>
+					Важно! Изменить данные после сохранения можно только через
+					техподдержку НашГарант
+				</p>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal" *ngIf="showModal">
+	<div class="modal-content">
+		<button (click)="onClose()" class="close-modal">
+			<img src="images/close.svg" alt="close btn" width="22">
+		</button>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quas ipsam praesentium incidunt blanditiis
+			vero ducimus itaque pariatur! Iusto, assumenda repellat! Reprehenderit ea aspernatur libero animi sed explicabo
+			beatae in?</p>
+		<button class="submit-button" type="button" (click)="userSuccess(username)">Согласиться</button>
+	</div>
+</div>
