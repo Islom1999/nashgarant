@@ -1,24 +1,65 @@
 form {
-	margin-top: 43px;
+  margin-top: 43px;
 }
 
 .result-box {
-	background: transparent;
-	border: 1px solid #D3DDE7;
-	border-radius: 15px;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 13px 14px;
-	column-gap: 5px;
-	img {
-		display: block;
-	}
+  background: transparent;
+  border: 1px solid #d3dde7;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 13px 14px;
+  column-gap: 5px;
+  img {
+    display: block;
+  }
 
-	p {
-		color: #fff;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 14px;
-	}
+  p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.custom-select {
+  position: relative;
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selected-option {
+  padding: 8px;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.options li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.options li:hover {
+  background-color: #eee;
+}
+
+.input-block.flex{
+    display: flex;
 }

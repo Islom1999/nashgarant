@@ -38,7 +38,12 @@ export class HomeComponent implements OnInit {
 	]
 
 	transactioon = [
-		{ id: 'ID1233', offer: 12, min: 1221, max: 312212, kurs: 1212, bank: "T-Bank" },
+		{ id: 'ID384938', offer: 12, logo:"images/ok.svg", min: 2309, max: 2309, kurs: 2309, bank: "Сбербанк" , bank_logo: 'images/bank.svg'},
+		{ id: 'ID384938', offer: 12, logo:"images/ok.svg", min: 2309, max: 2309, kurs: 2309, bank: "Сбербанк" , bank_logo: 'images/bank.svg'},
+		{ id: 'ID384938', offer: 12, logo:"images/ok.svg", min: 2309, max: 2309, kurs: 2309, bank: "Сбербанк" , bank_logo: 'images/bank.svg'},
+		{ id: 'ID384938', offer: 12, logo:"images/ok.svg", min: 2309, max: 2309, kurs: 2309, bank: "Сбербанк" , bank_logo: 'images/bank.svg'},
+		{ id: 'ID384938', offer: 12, logo:"images/ok.svg", min: 2309, max: 2309, kurs: 2309, bank: "Сбербанк" , bank_logo: 'images/bank.svg'},
+		{ id: 'ID384938', offer: 12, logo:"images/ok.svg", min: 2309, max: 2309, kurs: 2309, bank: "Сбербанк" , bank_logo: 'images/bank.svg'},
 	]
 
 	setActiveLogo(item: ILogo) {
