@@ -1,41 +1,74 @@
-<div class="form-container">
-  <h2>Заявка на покупку ПокерОК</h2>
-  <a href="#" class="back-link">Вернуться назад</a>
+<div class="container big">
+	<div class="deposit-head">
+		<h2>Заявка на покупку ПокерОК</h2>
+		<a (click)="goBack()"  class="back-link">
+			<img src="images/left-arrow.svg" alt="back link" width="14">
+			Вернуться назад
+		</a>
+	</div>
+	<form>
+		<div class="form-left">
+			<label class="info-order">
+				Информация о заявке
+				<img src="images/down-blue.svg" alt="select-arrow" width="8">
+			</label>
+			<div class="form-series">
+				<label>Сумма покупки в RUB:</label>
+				<div class="input-block">
+					<input type="text" placeholder="От 10780.00 до 156847.92 RUB" />
+					<span class="max-link">Максимум</span>
+				</div>
+				<div class="alert">
+					Обязательное поле
+				</div>
+			</div>
 
-  <form>
-    <label>Информация о заявке</label>
+			<div class="form-series">
+				<label>Сумма покупки в USD:</label>
+				<div class="input-block">
+					<input type="text" placeholder="От 100.00 до 1454.99 USD" />
+					<span class="max-link">Максимум</span>
+				</div>
+			</div>
 
-    <label>Сумма покупки в RUB:</label>
-    <input type="text" placeholder="От 10780.00 до 156847.92 RUB" />
-    <a href="#" class="max-link">Максимум</a>
+			<div class="info-box">
+				<img src="images/obmen-icon.svg" alt="obmen" width="19">
+				<span>Курс обмена: 1 USD / 107.8 RUB</span>
+			</div>
+		</div>
+		<div class="form-right">
+			<div class="form-series form-series__right">
+				<label>Ваш никнейм в ПокерОК:</label>
+				<div class="input-block">
+					<input type="text" placeholder="nashgarant" />
+					<div class="alert">
+						Обязательное поле
+					</div>
+				</div>
+			</div>
 
-    <label>Сумма покупки в USD:</label>
-    <input type="text" placeholder="От 100.00 до 1454.99 USD" />
-    <a href="#" class="max-link">Максимум</a>
+			<div class="alert-box">
+				<img src="images/warn-white.svg" alt="alert" width="19">
+				<p>
+					Внимательно заполняйте поле! Перевод средств сделают на указанный
+					аккаунт.
+				</p>
+			</div>
 
-    <div class="info-box">
-      <span>Курс обмена: 1 USD / 107.8 RUB</span>
-    </div>
+			<button type="submit" class="submit-button">
+				<img src="images/check-icon.svg" alt="check-icon" width="20">
+				Подать заявку на покупку
+			</button>
 
-    <label>Ваш никнейм в ПокерОК:</label>
-    <input type="text" placeholder="nashgarant" />
-
-    <div class="alert-box">
-      <p>
-        Внимательно заполняйте поле! Перевод средств сделают на указанный
-        аккаунт.
-      </p>
-    </div>
-
-    <button type="submit" class="submit-button">
-      Подать заявку на покупку
-    </button>
-
-    <p class="terms">
-      Подавая заявку, вы принимаете условия
-      <a href="#">лицензионного договора</a>, а также соглашаетесь с
-      <a href="#">политикой конфиденциальности</a> и
-      <a href="#">политикой AML / KYC</a>.
-    </p>
-  </form>
+			<div class="terms-block">
+				<input type="checkbox">
+				<p class="terms">
+					Подавая заявку, вы принимаете условия
+					<a href="#">лицензионного договора</a>, а также соглашаетесь с
+					<a href="#">политикой конфиденциальности</a> и
+					<a href="#">политикой AML / KYC</a>
+				</p>
+			</div>
+		</div>
+	</form>
 </div>
