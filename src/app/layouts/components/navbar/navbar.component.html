@@ -3,7 +3,7 @@
 		<div class="header-wrappper">
 			<div class="header-left">
 				<a routerLink="/" class="logo">
-					<img src="images/logo.svg" alt="Logo" class="logo" />
+					<img src="images/logo.png" alt="Logo" class="logo" />
 				</a>
 				<div class="header-center">
 					<button routerLink="/withdrawal" class="sell-button">
@@ -36,9 +36,9 @@
 					</div>
 				</div>
 				<div class="profile">
-					<button (click)="openModal()" class="profile__btn">
+					<button class="profile__btn" type="button" routerLink="/profile">
 						Профиль
-						<img src="images/profile.svg" alt="user" width="16" height="16">
+						<img src="images/profile.svg" alt="user" width="16" height="16" (click)="openModal()">
 					</button>
 					<button class="logout__btn">
 						<img src="images/logout.svg" alt="logout" width="16" height="16">

@@ -1,1 +1,18 @@
-<p>profile works!</p>
+<div class="container big">
+	<div class="deposit-head">
+		<h2>Личный кабинет</h2>
+		<a routerLink="/" class="back-link">
+			<img src="images/left-arrow.svg" alt="back link" width="14">
+			На главную
+		</a>
+	</div>
+
+	<div class="_switch-btns profile-toogle">
+		<button class="switch-button toggle__btn" routerLink="information" routerLinkActive="active">Информация</button>
+		<button class="switch-button toggle__btn" type="button" routerLink="balance"
+			routerLinkActive="active">Балансы</button>
+	</div>
+	<div class="profile-content">
+		<router-outlet></router-outlet>
+	</div>
+</div>
