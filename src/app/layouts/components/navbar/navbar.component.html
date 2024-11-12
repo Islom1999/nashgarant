@@ -1,21 +1,23 @@
 <header>
 	<div class="container">
 		<div class="header-wrappper">
-			<a routerLink="/" class="logo">
-				<img src="images/logo.svg" alt="Logo" class="logo" />
-			</a>
-			<div class="header-center">
-				<button routerLink="/withdrawal" class="sell-button">
-					<img src="images/top-right.svg" alt="top-right.png">
-					Сделать заявку на продажу
-				</button>
-				<div class="_switch-btns header-center__toggle">
-					<button class="switch-button toggle__btn" [class.active]="activeButton === 'all'"
-						(click)="setActiveButton('all')">Все
-						заявки</button>
-					<button class="switch-button toggle__btn" [class.active]="activeButton === 'my'"
-						(click)="setActiveButton('my')">Мои
-						заявки</button>
+			<div class="header-left">
+				<a routerLink="/" class="logo">
+					<img src="images/logo.svg" alt="Logo" class="logo" />
+				</a>
+				<div class="header-center">
+					<button routerLink="/withdrawal" class="sell-button">
+						<img src="images/top-right.svg" alt="top-right.png">
+						Сделать заявку на продажу
+					</button>
+					<div class="_switch-btns header-center__toggle">
+						<button class="switch-button toggle__btn" [class.active]="activeButton === 'all'"
+							(click)="setActiveButton('all')">Все
+							заявки</button>
+						<button class="switch-button toggle__btn" [class.active]="activeButton === 'my'"
+							(click)="setActiveButton('my')">Мои
+							заявки</button>
+					</div>
 				</div>
 			</div>
 			<div class="navbar-right">

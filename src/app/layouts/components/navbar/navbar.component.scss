@@ -23,6 +23,14 @@ a.logo {
 	justify-content: space-between;
 }
 
+.header-left {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 40px;
+	width: 100%;
+}
+
 .header-center {
 	width: 100%;
 	max-width: 890px;
@@ -32,11 +40,13 @@ a.logo {
 
 	.sell-button {
 		padding-inline: 35px;
+		width: calc(50% - 15px);
 		height: 45px;
 		border: none;
 		background-color: #4aa361;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		border-radius: 10px;
 		color: white;
 		column-gap: 5px;
@@ -50,6 +60,13 @@ a.logo {
 	}
 }
 
+.header-center__toggle {
+	width: calc(50% - 15px);
+
+	.toggle__btn {
+		height: 35px;
+	}
+}
 
 .navbar-right {
 	display: flex;
