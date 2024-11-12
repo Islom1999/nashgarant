@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { bankData, sbpBankData } from '../../shared';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-withdrawal',
@@ -10,13 +11,11 @@ import { bankData, sbpBankData } from '../../shared';
 export class WithdrawalComponent implements OnInit {
 	activeLogo!: any
 	activeCurrency!: string
-
-  bankData = bankData
-
-  sbpBankData = sbpBankData
-
-  activeBank: any
-  activeSbpBank: any
+	bankData = bankData
+	sbpBankData = sbpBankData
+	activeBank: any
+	activeSbpBank: any
+	cardForm!: FormGroup
 
 	logoSection = [
 		{ id: '1', image: 'https://nashgarant.me/assets/images/exchanges/POK.svg', name: 'ПокерОК', has_bot: true, currency: ['RUB', 'BYN', 'KZT',], bot: { deposit: 1222, withdraw: 1221, min: 1212, max: 1212112, time: "5-10 min", link: 'https://t.me/luxonobmenbot' } },
@@ -26,7 +25,6 @@ export class WithdrawalComponent implements OnInit {
 		{ id: '5', image: 'https://nashgarant.me/assets/images/exchanges/PK.svg', name: 'PokerKing', has_bot: false, currency: ['RUB', 'BYN', 'KZT', 'UAH'] },
 		{ id: '6', image: 'https://nashgarant.me/assets/images/exchanges/RS.svg', name: 'RedStar', has_bot: false, currency: ['RUB', 'BYN', 'KZT', 'UAH'] },
 	]
-
 	constructor(private location: Location) { }
 
 	ngOnInit(): void {
@@ -42,10 +40,7 @@ export class WithdrawalComponent implements OnInit {
 	ActiveButton(button: string) {
 		this.activeButton = button;
 	}
-
-
 	dropdownOpen1 = false;
-
 	toggleDropdown1() {
 		this.dropdownOpen1 = !this.dropdownOpen1;
 		this.dropdownOpen2 = false;
@@ -66,7 +61,7 @@ export class WithdrawalComponent implements OnInit {
 		this.activeCurrency = option;
 	}
 
-  dropdownOpen3 = false;
+	dropdownOpen3 = false;
 
 	toggleDropdown3() {
 		this.dropdownOpen3 = !this.dropdownOpen3;
@@ -75,10 +70,10 @@ export class WithdrawalComponent implements OnInit {
 	}
 
 	selectOption3(option: string) {
-    this.activeBank = this.bankData.find(o => o.name === option);
+		this.activeBank = this.bankData.find(o => o.name === option);
 	}
 
-  dropdownOpen4 = false;
+	dropdownOpen4 = false;
 
 	toggleDropdown4() {
 		this.dropdownOpen4 = !this.dropdownOpen4;
@@ -88,7 +83,7 @@ export class WithdrawalComponent implements OnInit {
 	}
 
 	selectOption4(option: string) {
-    this.activeSbpBank = this.sbpBankData.find(o => o.name === option);
+		this.activeSbpBank = this.sbpBankData.find(o => o.name === option);
 	}
 
 	@HostListener('document:click', ['$event'])
@@ -97,6 +92,22 @@ export class WithdrawalComponent implements OnInit {
 		if (!target.closest('.custom-select')) {
 			this.dropdownOpen1 = false;
 			this.dropdownOpen2 = false;
+			this.dropdownOpen3 = false;
+			this.dropdownOpen4 = false;
+		}
+	}
+
+	maxMountVal!: number | null;
+	maxBtn: string = 'Максимум';
+
+	maxMount(inputElement: HTMLInputElement) {
+		if (this.maxMountVal === null || this.maxMountVal === undefined) {
+			this.maxMountVal = this.activeBank.refill_max_amount;
+			this.maxBtn = 'Очистить';
+		} else {
+			this.maxMountVal = null;
+			this.maxBtn = 'Максимум';
+			inputElement.focus();
 		}
 	}
 }
