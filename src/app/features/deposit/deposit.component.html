@@ -15,10 +15,10 @@
 			<div class="form-series">
 				<label>Сумма покупки в RUB:</label>
 				<div class="input-block">
-					<input type="text" placeholder="От 10780.00 до 156847.92 RUB" />
-					<span class="max-link">Максимум</span>
+					<input #input type="number" placeholder="От 10780.00 до 156847.92 RUB" />
+					<span class="max-link" (click)="maxBtn(input)">{{toogleTxt}}</span>
 				</div>
-				<div class="alert">
+				<div class="input-validate">
 					Обязательное поле
 				</div>
 			</div>
@@ -41,14 +41,14 @@
 				<label>Ваш никнейм в ПокерОК:</label>
 				<div class="input-block">
 					<input type="text" placeholder="nashgarant" />
-					<div class="alert">
+					<div class="input-validate">
 						Обязательное поле
 					</div>
 				</div>
 			</div>
 
 			<div class="alert-box">
-				<img src="images/warn-white.svg" alt="alert" width="19">
+				<img src="images/warn-white.svg" alt="input-validate" width="19">
 				<p>
 					Внимательно заполняйте поле! Перевод средств сделают на указанный
 					аккаунт.

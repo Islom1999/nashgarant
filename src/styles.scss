@@ -114,18 +114,23 @@ input[type="radio"] {
 			user-select: none;
 		}
 	}
+}
 
-	.alert {
-		display: none;
-		width: 100%;
-		padding: 14px;
-		background-color: #e67575;
-		color: #fff;
-		font-weight: 400;
-		font-size: 13px;
-		border-radius: 15px;
-		margin-top: 8px;
-		text-align: center;
+.input-validate {
+	display: none;
+	width: 100%;
+	padding: 14px;
+	background-color: #e67575;
+	color: #fff;
+	font-weight: 400;
+	font-size: 13px;
+	border-radius: 15px;
+	margin-top: 8px;
+	text-align: center;
+	display: none;
+
+	&.alert {
+		display: block;
 	}
 }
 

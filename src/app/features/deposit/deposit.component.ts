@@ -10,4 +10,18 @@ export class DepositComponent {
 	goBack(): void {
 		this.location.back();
 	}
+	toogleTxt: string = 'Максимум'
+	maxBtn(input: HTMLInputElement): void {
+		if (!input.value) {
+			this.toogleTxt = 'Очистить';
+			input.value = '38934398'
+			input.blur();
+			input.disabled = true;
+		} else {
+			this.toogleTxt = 'Максимум';
+			input.value = '';
+			input.disabled = false
+			input.focus();
+		}
+	}
 }
